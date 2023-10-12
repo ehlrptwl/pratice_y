@@ -1,0 +1,16 @@
+*** Settings ***
+Library    AppiumLibrary
+
+
+*** Keywords ***
+chrome open
+    Open Application    http://localhost:4723/wd/hub      platformName=Android      platformVersion=13     deviceName='emulator-5554'       appPackage=com.android.chrome     appActivity=com.google.android.apps.chrome.Main       noReset=true
+
+go naver
+    Go To Url    https://m.naver.com
+
+
+*** Test Cases ***
+gogo
+    chrome open
+    go naver
